@@ -6,7 +6,7 @@
 <title>Asite — Product Components (v4.0)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="product.css">
+<link rel="stylesheet" href="../product/product.css">
 <style>
   body{margin:0;background:var(--bg-0);font-family:var(--font-ui)}
   .page{max-width:1080px;margin:0 auto;padding:0 2rem 6rem}
@@ -25,9 +25,27 @@
   .stk{display:flex;flex-direction:column;gap:14px}
   .cap{font-family:var(--font-mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3);margin-bottom:8px;display:block}
   @media(max-width:720px){.grid2{grid-template-columns:1fr}}
+nav{position:sticky;top:0;z-index:50;height:56px;background:rgba(13,39,69,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.08)}
+nav .wrap{display:flex;align-items:center;height:56px;gap:1.5rem;max-width:1080px;margin:0 auto;padding:0 2rem}
+nav img{height:24px;width:auto}
+.npills{display:flex;gap:2px;margin-left:auto;flex-wrap:wrap}
+.np{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.5px;color:rgba(255,255,255,.4);padding:6px 11px;border-radius:20px;text-decoration:none}
+.np:hover{color:#fff;background:rgba(255,255,255,.06)}.np.on{color:#fff;background:rgba(255,255,255,.1)}
 </style>
 </head>
 <body class="asite">
+<nav>
+  <div class="wrap">
+    <a href="../index.html" aria-label="Asite"><img src="../assets/asite-logo-white.png" alt="Asite"></a>
+    <div class="npills">
+      <a class="np" href="../index.html">Language</a>
+      <a class="np" href="../screens.html">Product</a>
+      <a class="np" href="../web.html">Website</a>
+      <a class="np" href="../slides.html">Slides</a>
+      <a class="np" href="../ai-hub.html"><svg width="10" height="10" viewBox="0 0 24 24" fill="#33c7b7" style="vertical-align:-1px;margin-right:5px"><path d="M12 2.5 L13.9 9 L20.5 11 L13.9 13 L12 21 L10.1 13 L3.5 11 L10.1 9 Z"/></svg>AI Hub</a>
+    </div>
+  </div>
+</nav>
 
 <div class="masthead">
   <div class="in">
@@ -185,7 +203,7 @@
     </div>
   </div>
 
-  <p class="mono" style="margin-top:2rem;color:var(--text-3)">Built on product.css &middot; pairs with <a href="app.html" style="color:var(--red)">app.html</a> — the assembled interface.</p>
+  <p class="mono" style="margin-top:2rem;color:var(--text-3)">Built on product.css &middot; pairs with <a href="../product/app.html" style="color:var(--red)">app.html</a> — the assembled interface.</p>
 </div>
 
 </body>
